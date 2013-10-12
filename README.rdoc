@@ -1,0 +1,22 @@
+= Contactus
+
+Contactus is a simple Ruby on Rails gem that generate a contact form for your site.
+
+== How to use this gem
+
+Add the gem to your Gemfile
+
+      gem 'contactus'
+
+Install the gem:
+
+      $ bundler
+      $ bundle exec rake contactus:install
+
+Go to your site
+
+      $ http://0.0.0.0:3000/contact
+
+== Customization
+
+There will be a initializer file called contactus.rb, where you can configure the nexst config variables

@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+
+es:
+  mail_form:
+    models:
+      contactus/contact_form: 
+        one: "Contacto"
+        other: 'Contactos'
+   
+    attributes:
+      contactus/contact_form:
+        name: "Nombres y Apellidos"
+        email: 'Correo electrónico'
+        message: "Comentarios"
+
+    request:
+      title: "Información técnica sobre el usuario"
+      remote_ip: "Dirección IP"
+      user_agent: "Navegador"
+
+
+  contactus:
+    contact_forms:
+      success: 'Gracias por escribirnos, pronto nos pondremos en contacto contigo.'
+      spam: 'Lo sentimos, este mensaje aparece como spam y no se entregó.'
+      subject: 'Alguien se a puesto en contacto.'
+
+      new:
+        send: 'Enviar'
+        captcha_field: 'Deje este campo en blanco'
+
