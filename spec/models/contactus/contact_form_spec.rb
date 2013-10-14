@@ -25,6 +25,38 @@ module Contactus
 
     end
 
+    context 'extra fields' do
+
+      describe 'optional_extra_fields' do
+
+        it 'should create raise an exception if the extra_fields has not been defined' do
+          expect{
+            FactoryGirl.build(:contact_form, foo: 'foo', bar: 'bar')
+          }.to raise_error NoMethodError
+        end
+
+        it 'should create two extra fields' do
+          Contactus.extra_fields = %w(foo bar)
+          @contact_form =  FactoryGirl.build(:contact_form, foo: 'foo', bar: 'bar')
+        end
+      end
+
+      describe 'required_extra_fields' do
+
+        it 'should create raise an exception if the required_extra_fields has not been defined' do
+          expect{
+            FactoryGirl.build(:contact_form, mi: 'mi', fa: 'fa')
+          }.to raise_error NoMethodError
+        end
+
+        it 'should create two extra fields' do
+          Contactus.required_extra_fields = %w(mi fa)
+          @contact_form =  FactoryGirl.build(:contact_form, mi: 'fa', mi: 'fa')
+        end
+      end
+
+    end
+
   end
 
 end

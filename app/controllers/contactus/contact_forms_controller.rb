@@ -11,10 +11,7 @@ module Contactus
         @contact_form = ContactForm.new(params[:contactus_contact_form])
         @contact_form.request = request
 
-        if @contact_form.deliver
-          flash[:notice] = I18n.t('.contactus.contact_forms.success')
-          redirect_to root_path
-        else
+        if !@contact_form.deliver
           if @contact_form.spam?
             flash[:error] = I18n.t('.contactus.contact_forms.spam')
             redirect_to root_path

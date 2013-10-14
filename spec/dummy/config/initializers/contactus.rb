@@ -6,7 +6,7 @@ Contactus.setup do |config|
   config.mailer_to = "contact@example.com"
 
   # Configure extra fields
-  #config.extra_fields = %w(city phone)
+  config.extra_fields = %w(city)
 
   # Configure extra required fields
   #config.required_extra_fields = %w(country address)

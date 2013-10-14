@@ -3,6 +3,7 @@
   = f.input :name, :autofocus => true, :required => true 
   = f.input :email, :required => true 
   = f.input :message, :as => :text, :required => true 
+  = f.input :city, :as => :text, :required => true 
   
   .hidden
     = f.input :nickname, :hint => t('.captcha_field', default: 'Leave this field blank!')
