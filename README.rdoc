@@ -2,6 +2,8 @@
 
 Contactus is a simple Ruby on Rails gem that generate a contact form for your site.
 
+Note: This game is still in development, thanks your patience :P
+
 == How to use this gem
 
 Add the gem to your Gemfile
@@ -19,4 +21,13 @@ Go to your site
 
 == Customization
 
-There will be a initializer file called contactus.rb, where you can configure the nexst config variables
+There will be a initializer file called contactus.rb, where you can configure the next config variables:
+
+      # Configure the e-mail address which should receive the email
+      config.mailer_to = "contact@example.com"
+
+      # Configure extra fields
+      #config.extra_fields = %w(city phone)
+
+      # Configure extra required fields
+      #config.required_extra_fields = %w(country address)
