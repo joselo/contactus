@@ -37,7 +37,7 @@ module Contactus
 
         it 'should create two extra fields' do
           Contactus.extra_fields = %w(foo bar)
-          @contact_form =  FactoryGirl.build(:contact_form, foo: 'foo', bar: 'bar')
+          @contact_form =  ContactForm.new(foo: 'foo', bar: 'bar')
         end
       end
 
@@ -51,7 +51,7 @@ module Contactus
 
         it 'should create two extra fields' do
           Contactus.required_extra_fields = %w(mi fa)
-          @contact_form =  FactoryGirl.build(:contact_form, mi: 'fa', mi: 'fa')
+          @contact_form = ContactForm.new(mi: 'fa', mi: 'fa')
         end
       end
 
