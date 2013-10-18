@@ -5,6 +5,9 @@ Contactus.setup do |config|
   # Configure the e-mail address which should receive the email
   config.mailer_to = "contact@example.com"
 
+  # Configure the e-mail address which should receive the cc email
+  #config.mailer_cc = "contact@example.com"
+
   # Configure extra fields
   #config.extra_fields = %w(city phone)
 

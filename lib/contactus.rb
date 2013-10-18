@@ -5,6 +5,9 @@ module Contactus
   # Address to send the email.
   mattr_accessor :mailer_to
 
+  # Address to send the cc email.
+  mattr_accessor :mailer_cc
+
   # Extra fields
   mattr_accessor :extra_fields
 

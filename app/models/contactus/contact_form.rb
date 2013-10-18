@@ -21,11 +21,21 @@ module Contactus
     end
 
     def headers
+      default_header.merge(cc_header)
+    end
+
+    private
+
+    def default_header
       {
         :subject => I18n.t('.contactus.contact_forms.subject'),
         :to => Contactus.mailer_to,
         :from => %("#{name}" <#{email}>)
-      }
+      }      
+    end
+
+    def cc_header
+      (Contactus.mailer_cc)? { :cc => Contactus.mailer_cc } : {}
     end
 
   end
