@@ -2,6 +2,9 @@ require "contactus/engine"
 
 module Contactus
 
+  # From address email.
+  mattr_accessor :mailer_from
+
   # Address to send the email.
   mattr_accessor :mailer_to
 

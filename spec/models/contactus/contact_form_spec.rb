@@ -34,15 +34,20 @@ module Contactus
 
       end
 
-      context 'with cc' do
+      context 'with custom variables' do
 
         before do
           Contactus.mailer_cc = "cc@example.com"
+          Contactus.mailer_from = "from@example.com"
           @contact_form = FactoryGirl.build(:contact_form)
         end
 
         it 'should assing the cc' do
           @contact_form.headers[:cc].should == Contactus.mailer_cc
+        end
+
+        it 'should assing the from' do
+          @contact_form.headers[:from].should == Contactus.mailer_from
         end
 
       end

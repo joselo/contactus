@@ -30,12 +30,16 @@ module Contactus
       {
         :subject => I18n.t('.contactus.contact_forms.subject'),
         :to => Contactus.mailer_to,
-        :from => %("#{name}" <#{email}>)
+        :from => from_email
       }      
     end
 
     def cc_header
       (Contactus.mailer_cc)? { :cc => Contactus.mailer_cc } : {}
+    end
+
+    def from_email
+      Contactus.mailer_from || %("#{name}" <#{email}>)
     end
 
   end
