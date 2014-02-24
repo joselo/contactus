@@ -38,12 +38,17 @@ module Contactus
 
         before do
           Contactus.mailer_cc = "cc@example.com"
+          Contactus.mailer_bcc = ["bcc1@example.com", "bcc2@example.com"]
           Contactus.mailer_from = "from@example.com"
           @contact_form = FactoryGirl.build(:contact_form)
         end
 
         it 'should assing the cc' do
           @contact_form.headers[:cc].should == Contactus.mailer_cc
+        end
+
+        it 'should assing the bcc' do
+          @contact_form.headers[:bcc].should == Contactus.mailer_bcc
         end
 
         it 'should assing the from' do

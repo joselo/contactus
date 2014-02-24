@@ -11,6 +11,9 @@ module Contactus
   # Address to send the cc email.
   mattr_accessor :mailer_cc
 
+  # Address to send the bcc emails.
+  mattr_accessor :mailer_bcc
+
   # Extra fields
   mattr_accessor :extra_fields
 

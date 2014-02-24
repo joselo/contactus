@@ -29,6 +29,9 @@ There will be a initializer file called contactus.rb, where you can configure th
       # Configure the e-mail address which should receive the cc email
       #config.mailer_cc = "contact@example.com"      
 
+      # Configure multiple e-mail address which should receive the bcc email
+      #config.mailer_bcc = ["contact1@example.com", "contact2@example.com", "contact3@example.com"]
+
       # Configure extra fields
       #config.extra_fields = %w(city phone)
 

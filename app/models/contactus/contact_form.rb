@@ -21,7 +21,7 @@ module Contactus
     end
 
     def headers
-      default_header.merge(cc_header)
+      default_header.merge(cc_header).merge(bcc_header)
     end
 
     private
@@ -36,6 +36,10 @@ module Contactus
 
     def cc_header
       (Contactus.mailer_cc)? { :cc => Contactus.mailer_cc } : {}
+    end
+
+    def bcc_header
+      (Contactus.mailer_bcc)? { :bcc => Contactus.mailer_bcc } : {}
     end
 
     def from_email
